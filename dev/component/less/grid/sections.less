@@ -68,10 +68,16 @@ padding: (@top-height - 20px)/2 0;
 .presentation{
   position:relative;
   margin:0 0;
+  height:540px;
   padding:0 0;
-  height:570px;
   z-index:1;
   overflow: hidden;
+  @media (max-width: @screen-md) {
+    height:480px;
+    .presentation-wrapper{width:100%;
+    .container{margin:0 auto;}
+    }
+  }
 }
 
 //footer

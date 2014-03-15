@@ -257,7 +257,7 @@ yepnope([
                 $('#mmenu').mmenu({
                     moveBackground:true,
                     position:"left",
-                    zposition:"next",
+                    zposition:"front",
                     searchfield:false,
                     isMenu:true,
                     counters:false,
@@ -304,7 +304,7 @@ console.log("swiper");
                     speed:2000,
                     loop:false,
                     mode:'horizontal',
-                    calculateHeight:true,
+//                    calculateHeight:true,
                     mousewheelControl:false,
                     keyboardControl:true,
 //                    paginationClickable:true,
