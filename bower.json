@@ -13,7 +13,7 @@
     "backbone": null,
     "underscore": null,
     "requirejs": null,
-    "jQuery.mmenu": "~4.1.9",
+    "jQuery.mmenu": "~4.2.0",
     "pace": null,
     "Snap.svg": null,
     "semantic-ui": null,

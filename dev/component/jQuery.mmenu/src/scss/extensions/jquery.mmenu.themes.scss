@@ -100,35 +100,3 @@ $inputBg		: rgba( 255, 255, 255, 0.3 );
 @include colors_header( $cls,
 	$dimmedText,
 	$border );
-
-
-//	Black
-$cls			: ".mm-black";
-$baseBg			: #000;
-$pageShadow		: none;
-$text			: rgba( 255, 255, 255, 0.6 );
-$dimmedText		: rgba( 255, 255, 255, 0.3 );
-$emphasizedBg	: rgba( 255, 255, 255, 0.25 );
-$highlightedBg	: rgba( 255, 255, 255, 0.15 );
-$border			: rgba( 255, 255, 255, 0.2 );
-$inputBg		: rgba( 255, 255, 255, 0.3 );
-
-@include colors( $cls,
-	$baseBg, $pageShadow,
-	$text, $dimmedText,
-	$emphasizedBg, $highlightedBg,
-	$border );
-
-@include colors_search( $cls,
-	$inputBg, $text,
-	$dimmedText );
-
-@include colors_counters( $cls,
-	$dimmedText );
-
-@include colors_labels( $cls,
-	$highlightedBg );
-
-@include colors_header( $cls,
-	$dimmedText,
-	$border );
