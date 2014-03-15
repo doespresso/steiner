@@ -1,0 +1,40 @@
+@ui-arrow-size:72px;
+
+.ui-arrow{
+  position:absolute;
+  top:50%;
+  display:block;
+  width: @ui-arrow-size;
+  height:@ui-arrow-size;
+  margin: -(@ui-arrow-size/2) @ui-arrow-size/2 0 @ui-arrow-size/2;
+  font-size: @ui-arrow-size;
+  line-height: @ui-arrow-size;
+  background-color: transparent;
+  border:none;
+  padding:0;
+  color:#fff;
+  z-index:10;
+  font-family: @icon-font-name;
+}
+.ui-arrow-next{
+  left:0;
+  text-align: center;
+}
+.ui-arrow-next:before{
+//  content:'\eac2';
+  content:'\e829';
+}
+.ui-arrow-prev{
+  right:0;
+  text-align: center;
+}
+.ui-arrow-prev:before{
+//  content:'\eac5';
+  content:'\e82c';
+}
+
+html.touch{
+  .ui-arrow{display:none!important}
+}
+
+.ui-arrow-big{}

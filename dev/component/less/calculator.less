@@ -1,0 +1,37 @@
+#calculator{
+  display: none;
+  background-color: @gray-lighter;
+  padding:@gap-base;
+}
+.w-selectors{
+  list-style: none;
+  margin:0;
+  padding:20px 0;
+  li{
+    float:left;
+    margin-right: 10px;
+  }
+}
+.w-selector{
+  display:inline-block;
+}
+
+.w-section{
+  display:inline-block;
+  position:relative;
+  float:left;
+  border:4px;
+  border-style:solid;
+  border-color:#fff;
+  .opacity(0.7);
+  width:40px;
+  height:60px;
+  margin-right: 0px;
+  background-color: #50e3dd;
+}
+
+.selected .w-selector .w-section{.opacity(1)}
+
+.w-edit{
+
+}

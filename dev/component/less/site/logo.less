@@ -1,0 +1,121 @@
+.logo{
+  display:inline-block;
+//  background-image: url('/assets/logo/black-e.svg');
+  background-image: url('/assets/logo/black-e.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.logo-white{
+  display:inline-block;
+//  background-image: url('/assets/logo/black-e.svg');
+  background-image: url('/assets/logo/white.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+
+@logo-width:100%;
+@logo-height:60px;
+
+.logo-standart-menu{
+  .logo;
+  width:@logo-width;
+  height:@logo-height;
+  padding:0;
+}
+
+.logo-standart-menu-white{
+  .logo-white;
+  width:@logo-width;
+  height:@logo-height;
+  padding:0;
+}
+
+
+.logo-standart{
+  .logo-standart-menu;
+//  float:right;
+//  margin-right:-20px;
+  @media (max-width:@screen-tablet){
+
+  }
+  @media (max-width:@screen-phone){
+
+  }
+}
+
+.logo-standart-white{
+  .logo-standart-menu-white;
+//  margin-left:-17px;
+  @media (max-width:@screen-tablet){
+
+  }
+  @media (max-width:@screen-phone){
+
+  }
+}
+
+
+
+
+[class*='it-']{
+  position:relative;
+  color:@gray-light;
+  [class*='icon-']{color:@c-main; margin-right: 3px;}
+}
+[class*='it-']:before{
+  content:" ";
+  position:absolute;
+  left:@gap-big;
+  top: -@gap-small * 2.3;
+  width:28px;
+  height:20px;
+//  background-color: red;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: contain;
+  @media (max-width: @screen-phone) {
+    left: @gap-base;
+  }
+}
+
+[class*='it-']:after{
+  content:" ";
+  position:absolute;
+  left:@gap-big + 21px;
+  top:-@gap-small * 2.4;
+  width:10px;
+  height:14px;
+//  background-color: red;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: contain;
+  @media (max-width: @screen-phone) {
+    left: @gap-base + 21px;
+  }
+}
+
+.it-russia:before{
+  background-image: url('/assets/picto/russia_small.svg');
+}
+.it-russia:after{
+  background-image: url('/assets/picto/rus_flag_small.svg');
+}
+
+.it-world:before{
+  width:22px;
+//  background-image: url('/assets/picto/world_small.svg');
+}
+
+.it-phone{
+  span{
+//    white-space:nowrap;
+  }
+  a{border-bottom: 1px @gray-light dashed; color:@gray}
+}
+.it-phone:before{
+}
+

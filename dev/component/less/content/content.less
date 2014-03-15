@@ -1,0 +1,109 @@
+///////////sections///////////
+h1 {
+  font-family: @f-main;
+  font-size: @font-size-base * 2.5;
+  line-height: 0.95;
+  color: @gray;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: @gap-base;
+  text-transform: uppercase;
+  margin-left: -2px;
+//  @media (min-width: @screen-xs-max) {
+//    margin-top: @gap-base;
+    margin-top: 0;
+    margin-bottom: @gap-big;
+    font-size: @font-size-base*4;
+    text-align: left;
+//  }
+}
+
+
+.ilink{
+  padding-bottom:@gap-small/2.5;
+  border-bottom: 1px #000 solid;
+}
+
+.sub-title{text-transform: uppercase; font-size:12px;  font-family: @f-main; font-weight: bold; line-height: 1.5; color:@gray-lighter; margin-bottom: @gap-base;}
+.sub-text{font-size: 12px; line-height: 1.7;}
+
+
+article {
+  font-size:@article-font-size;
+  line-height:1.7;
+  h1 {
+    font-family: @f-main;
+    font-size: @font-size-base * 2.5;
+    line-height: 0.95;
+    color: @gray;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: @gap-base;
+    @media (min-width: @screen-xs-max) {
+      color: @c-h1;
+      margin-top: 0;
+      margin-bottom: @gap-big;
+      font-size: @font-size-base*4;
+      text-align: left;
+      #text-embossed-h1(@color:#fff);
+    }
+  }
+h2{
+  margin-bottom: 1em;
+  font-family: @f-main;
+  font-size: @font-size-base * 2.5;
+  font-weight: bold;
+  color:@gray-light;
+  text-align: center;
+  @media (min-width: @screen-xs-max) {
+    text-align: left;
+  }
+}
+p{
+//  margin-bottom: 1.8em;
+  >a{
+      text-decoration: underline;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+}
+//>p{
+//  @media (max-width: @screen-xs-max) {
+//    padding-left:1.8em;
+//    padding-right:1.8em;
+//  }
+//}
+  .pager{
+    margin-top: @gap-big;
+  }
+}
+
+
+
+ h5{
+//   font-family: @f-main;
+   text-transform: uppercase;
+   font-size: @font-size-large*1.5;
+   line-height: 1.1;
+   letter-spacing: 1px;
+   font-weight: bold;
+   margin-left:auto;
+   margin-right: auto;
+   margin-bottom:@gap-big;
+   color:@gray-light;
+   max-width: 50%;
+ }
+
+ .lead{
+//   margin-left:auto;
+//   margin-right: auto;
+//   max-width:70%;
+   line-height: 1.7;
+ }
+
+ .homepage{
+   h5,.lead{
+//     text-align: center;
+   }
+ }

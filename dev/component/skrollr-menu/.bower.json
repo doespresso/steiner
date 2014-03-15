@@ -1,0 +1,14 @@
+{
+  "name": "skrollr-menu",
+  "homepage": "https://github.com/Prinzhorn/skrollr-menu",
+  "version": "0.1.10",
+  "_release": "0.1.10",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.1.10",
+    "commit": "85b075e0bd86bc2727d84b02f927dc8359d2cda2"
+  },
+  "_source": "git://github.com/Prinzhorn/skrollr-menu.git",
+  "_target": "*",
+  "_originalSource": "skrollr-menu"
+}

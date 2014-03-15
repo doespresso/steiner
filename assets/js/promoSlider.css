@@ -1,0 +1,51 @@
+.divPromoSliderContainer{
+ position: relative;
+ margin:0!important;padding:0!important;
+}
+
+.divPromoSliderBottom{
+ bottom: 0;
+ position: fixed;
+ width: 100%;
+ z-index: 3500000;
+ height: 45px;
+}
+
+.divPromoSlider{
+ box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+ position: relative;
+ margin-left: auto;
+ margin-right: auto;
+ width: 250px;
+ height: 40px;
+ /*display:inline-block;*/
+ background: none repeat scroll 0 0 rgba(255, 255, 255, 0.5);
+ /*border-radius: 5px 5px 0 0;*/
+ /*padding: 4px 4px 0;*/
+}
+
+.divPromoSliderContent{
+ height: 100%;
+ background-image: -webkit-linear-gradient(top,  #696B77 0%, #515055 100%);
+ background-image: linear-gradient(to bottom, #696B77 0%, #515055 100%);
+ background-repeat: repeat-x;
+ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#696B77', endColorstr='#515055', GradientType=0);
+ filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+ border-radius: 2px 2px 0 0;
+ /*border-style: solid solid none;*/
+ /*border-width: 1px 1px 0;*/
+ /*box-shadow: 0 1px 0 0 #9898A2 inset, -1px 0 0 0 rgba(0, 0, 0, 0.3) inset;*/
+ overflow: hidden;
+ padding:10px;
+}
+
+.divPromoSliderClose{
+  position: absolute;
+  height: 31px;
+  width: 31px;
+  cursor: pointer;
+  right: -10px;
+  top: -10px;
+  background: url("http://asset3.cbsistatic.com/cnwk.1d/i/fbOpenGraph/close-dark.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+  text-indent: -10000px;
+}

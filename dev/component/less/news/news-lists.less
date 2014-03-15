@@ -1,0 +1,268 @@
+/////////////news simple vertical
+@tn-width:140px;
+@tn-height:140px;
+.news-list-simple{
+.media{
+  margin-bottom: @gap-base;
+}
+.media-object{
+  .pull-left;
+  max-width: @tn-width;
+  margin-right:20px;
+  img{width: 100%; height:auto;}
+}
+.media-body{
+  p{line-height: 1.3; margin-top:@gap-small}
+}
+.media-heading{
+  font-size:inherit;
+  font-weight: bold;
+}
+date{font-size: @font-size-small;}
+  @media (max-width: @screen-phone) {
+    .media-object{
+      float:none;
+//      clear:both;
+//      display:inline-block;
+      width:100%;
+      max-width: none;
+      margin-right:0;
+    }
+    .media-body{clear:both}
+  }
+}
+
+
+/////////////news simple scroll horizontal
+.news-list-scroll-hor {
+  @slider-height:260px;
+  @tn-width:140px;
+  @tn-height:120px;
+  height: @slider-height;
+
+  .swiper-slide {
+    width: 260px;
+    padding: @gap-base;
+    height: auto;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .swiper-pagination {
+    position: relative;
+    margin: 0;
+    padding: 0;
+  }
+
+  .swiper-pagination-switch {
+    display: inline-block;
+    background: darken(@body-bg-color, 10%);
+  }
+
+  .media-object {
+    .pull-left;
+    max-width: @tn-width;
+    margin-right: 20px;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .media-body {
+    p {
+      line-height: 1.3;
+      margin-top: @gap-small
+    }
+  }
+  .media-heading {
+    font-size: @font-size-base;
+    line-height: 1.2;
+    margin-top: @gap-small;
+    font-weight: bold;
+  }
+  date {
+//    font-size: @font-size-small;
+//    display: none;
+    font-size: @font-size-small;
+    color:@gray-light;
+    text-transform: uppercase;
+    font-family: @f-main;
+    font-weight: bold;
+  }
+  &.news-pic-top{
+    /////// pic top
+    .media-object {
+      float:none;
+      width:100%;
+      height:@tn-height;
+      display:block;
+      display:none;
+      overflow: hidden;
+      max-width: none;
+      img{
+        min-height: @tn-height;
+      }
+      }
+    .media-body {
+      clear:both;
+      padding-top:@gap-small;
+    }
+    }
+  .ui-arrow{
+    display:none
+  }
+  &:hover{
+    .ui-arrow{
+      display:block
+    }
+  }
+}
+
+
+/////////////news text
+
+.news-text{
+  .img-big{width: 100%; height:auto; margin-bottom:@gap-base;}
+  @media (max-width: @screen-phone) {
+    date{text-align: center;}
+  }
+}
+
+
+
+
+
+
+
+.c1-block {
+  background-color: @c-main;
+  color: #fff;
+  a {
+    color: #fff;
+    &:hover {
+      color: fff
+    }
+  }
+}
+
+.c2-block {
+  background-color: @c-alter;
+  color: #fff;
+  a {
+    color: #fff;
+    &:hover {
+      color: fff
+    }
+  }
+.title>span{
+  background-color: @c-alter;
+  color:#fff;
+}
+}
+
+.g1-block {
+  background-color: @gray-light;
+  color: #fff;
+  a {
+    color: #fff;
+    &:hover {
+      color: fff
+    }
+  }
+}
+
+.w-block {
+  background-color: #fff;
+  a {
+
+  }
+}
+
+/////news element in list
+
+.news-item {
+  date {
+    font-weight: bold;
+    font-family: @f-main;
+    font-size: 22px;
+  }
+//  margin:0 @gap-small;
+  padding: @gap-base;
+  .title {
+    font-size: 12px;
+    font-weight: 200;
+    line-height: 1.5;
+  }
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  &:hover {
+  }
+}
+
+
+
+////product element in scroll
+
+.product-item {
+  background-size: auto 80%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative; //  margin:0 @gap-small;
+  padding: @gap-base*1.4;
+  .title {
+    display: block;
+    font-weight: bold;
+    font-family: @f-main;
+    font-size: 22px;
+    margin-bottom: @gap-small;
+  }
+  .offer {
+    position: absolute;
+    left: @gap-base*1.4;;
+    bottom: @gap-small;
+    width: 100%;
+    display: block;
+    padding: 0 @gap-base 0 0;
+    div {
+      position: relative;
+      display: inline-block;
+      line-height: @gap-big;
+    }
+    .price {
+      font-weight: bold;
+      font-family: @f-main;
+      font-size: 24px;
+    }
+    sup {
+      font-weight: bold;
+      font-family: @f-main;
+      font-size: 11px; .opacity(0.5)}
+  }
+  .special-label {
+    position:absolute; bottom:@gap-big; left:0;
+    background-color: red;
+    padding: @gap-small @gap-base;
+  }
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  &:hover {
+    .ribbon{
+      .animated;
+      .pulse;
+    }
+  }
+}
+
+/////news list in srcoll
+.news-list {
+  .news-item, .product-item {
+    min-height: 260px;
+  }
+}

@@ -1,0 +1,32 @@
+.gallery{
+
+
+
+}
+
+.gallery-simple{
+  @tmb-width:100px;
+  @tmb-height:100px;
+  .tmb{
+    width:@tmb-width;
+    height:@tmb-height;
+//    border-radius:@tmb-height;
+    border-radius:4px;
+    position:relative;
+    margin-left:0;
+    margin-top:0;
+    margin-right:@gap-base;
+    margin-bottom:@gap-base;
+    display: inline-block;
+    background-color: @gray-lighter;
+    overflow: hidden;
+    text-align:center;
+    img{
+      width:auto;
+      height:100%;
+      margin-left: -50%;
+      margin-right: -50%;
+      -ms-interpolation-mode: bicubic;
+    }
+  }
+}

@@ -1,0 +1,101 @@
+@banner-height:200px;
+@banner-bg-color:#fff;
+@banner-padding:@gap-small @gap-big;
+@banner-title-font-size:20px;
+@banner-title-font-weight:bold;
+@banner-title-color:#fff;
+
+
+.media{
+  &.teaser-item{
+    padding-top:30px;
+    position:relative;
+    display:inline-block;
+    @icon-size:60px;
+//    height:@icon-size*1.5;
+    max-width:270px;
+    @media (max-width: @grid-float-breakpoint) {
+    max-width:220px;
+    }
+    vertical-align: top;
+    margin:0;
+    margin-right:@gap-small;
+  .media-object{
+      position: relative;
+      min-width:@icon-size;
+      margin-right:@gap-base;
+      float:left;
+      text-align: right;
+      text-decoration: none!important;
+      [class*='icon-']{
+        font-size: @icon-size;
+        line-height: 1.25;
+        color:#fff;
+        #text-embossed(@color:#fff);
+//        color:@gray-darker;
+      }
+    .label{
+      background-color: @c-main; font-size:12px; text-transform:uppercase; color:@gray-darker; padding:6px 8px; position:absolute; left:30px; top:-14px; display: none;
+//    .transition(1s);
+    }
+    }
+  .media-body{
+    padding:0 @gap-base;
+    margin-top:@gap-small;
+    ul{
+      display: none;
+      list-style: none;
+      margin:@gap-small 0;
+      padding:0;
+      li{
+        position: relative;
+        margin:@gap-small/2 0;
+//        font-size: 14px;
+        a{text-decoration: underline;}
+      }
+    }
+  }
+  .media-heading{font-size: 14px; font-weight: bold; margin-bottom: @gap-small;}
+  .media-heading a{text-decoration: underline;}
+  .desc{color:@gray-light; font-size: @font-size-small; line-height: 1.1;}
+  .desc-more{
+    display: none;
+    padding-top:@gap-small;
+    line-height:1.4;
+    a{text-decoration: underline;}
+    [class*='icon']{color:@gray-light; margin-right: 10px;}
+  }
+  }
+  &:hover {
+    .media-object {
+      [class*='icon-']{
+      color:@gray-dark;
+      text-shadow: none;
+      }
+      .label {
+//        display: inline-block;
+      }
+    }
+    .media-body {
+      ul {
+//        display: inline-block;
+      }
+    }
+  }
+}
+
+.teasers-list {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+//  max-width:98%;
+  @media(max-width: @screen-xs-max){
+    text-align: center;
+    .media{margin-right:0; margin-bottom: @gap-base; clear:both;
+      .media-object{float:none; text-align: center; margin-right: 0;}
+      .media-body{
+        clear:both;
+      }
+    }
+  }
+}
