@@ -1112,7 +1112,7 @@ yepnope([
                 $('#mmenu').mmenu({
                     moveBackground:true,
                     position:"left",
-                    zposition:"front",
+                    zposition:"next",
                     searchfield:false,
                     isMenu:true,
                     counters:false,
