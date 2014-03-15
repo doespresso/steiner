@@ -32,10 +32,103 @@ yepnope([
 //            'social_snap':'/assets/js/app/social-snap.js',
 //            'switchery':'/assets/js/vendor/switchery/switchery.min.js',
             'mmenu':'/assets/js/vendor/mmenu/src/js/jquery.mmenu.min.all.js',
+            'imagelightbox':'/assets/js/vendor/ImageLightbox/imagelightbox.min.js',
 //            'lightbox':'/assets/js/vendor/magnific-popup/jquery.magnific-popup.min.js',
 //            'calc':'/assets/js/app/calc.js',
         },
         callback:{
+
+            //////////////////////////LB/////////////////////
+            'imagelightbox':function (url, result, key) {
+
+                var activityIndicatorOn = function () {
+                        $('<div id="imagelightbox-loading"><div></div></div>').appendTo('body');
+                    },
+                    activityIndicatorOff = function () {
+                        $('#imagelightbox-loading').remove();
+                    },
+
+                    overlayOn = function () {
+                        $('<div id="imagelightbox-overlay"></div>').appendTo('body');
+                    },
+                    overlayOff = function () {
+                        $('#imagelightbox-overlay').remove();
+                    },
+
+                    closeButtonOn = function (instance) {
+                        $('<a href="#" id="imagelightbox-close">Close</a>').appendTo('body').on('click', function () {
+                            $(this).remove();
+                            instance.quitImageLightbox();
+                            return false;
+                        });
+                    },
+                    closeButtonOff = function () {
+                        $('#imagelightbox-close').remove();
+                    },
+
+                    captionOn = function () {
+                        var description = $('a[href="' + $('#imagelightbox').attr('src') + '"]').attr('title');
+                        if (description.length > 0)
+                            $('<div id="imagelightbox-caption">' + description + '</div>').appendTo('body');
+                    },
+                    captionOff = function () {
+                        $('#imagelightbox-caption').remove();
+                    },
+
+                    navigationOn = function (instance, selector) {
+                        var images = $(selector);
+                        if (images.length) {
+                            var nav = $('<div id="imagelightbox-nav"></div>');
+                            for (var i = 0; i < images.length; i++)
+                                nav.append('<a href="#"></a>');
+
+                            nav.appendTo('body');
+                            nav.on('click touchend', function () {
+                                return false;
+                            });
+
+                            var navItems = nav.find('a');
+                            navItems.on('click touchend', function () {
+                                var $this = $(this);
+                                if (images.eq($this.index()).attr('href') != $('#imagelightbox').attr('src'))
+                                    instance.switchImageLightbox($this.index());
+
+                                navItems.removeClass('active');
+                                navItems.eq($this.index()).addClass('active');
+
+                                return false;
+                            })
+                                .on('touchend', function () {
+                                    return false;
+                                });
+                        }
+                    },
+                    navigationUpdate = function (selector) {
+                        var items = $('#imagelightbox-nav a');
+                        items.removeClass('active');
+                        items.eq($(selector).filter('[href="' + $('#imagelightbox').attr('src') + '"]').index(selector)).addClass('active');
+                    },
+                    navigationOff = function () {
+                        $('#imagelightbox-nav').remove();
+                    };
+
+                $('a[data-imagelightbox="a"]').imageLightbox(
+                    {
+                        onStart: 	 function() { overlayOn(); },
+                        onLoadStart:function () {
+                            captionOff();
+                            activityIndicatorOn();
+                        },
+                        onLoadEnd:function () {
+                            activityIndicatorOff(); captionOn();
+                        },
+                        onEnd:function () {
+                            activityIndicatorOff(); captionOff(); overlayOff();
+                        }
+                    });
+            },
+            //////////////////////////LB/////////////////////
+
             'pace':function (url, result, key) {
                 console.log("pace");
             },
@@ -206,6 +299,7 @@ console.log("swiper");
                 var Hd_swiper = new Swiper('#scroll-slider', {
 //                    slidesPerView:'auto',
                     progress:true,
+                    resizeReInit:true,
                     watchActiveIndex:true,
                     speed:2000,
                     loop:false,

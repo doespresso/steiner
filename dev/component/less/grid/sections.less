@@ -108,17 +108,19 @@ section{
 }
 
 .mobile-fit{
-  @media (max-width: @screen-tablet) {
+  @media (max-width: @screen-sm) {
     margin-left:@gap-base;
     margin-right:@gap-base;
   }
 }
 
 .section-title{
-  margin-bottom: @gap-base;
-  font-weight: bold;
-  font-size:12px;
+//  margin-bottom: @gap-base;
+//  font-weight: bold;
+//  font-size:12px;
 //  text-transform: uppercase;
+  .mobile-fit;
+  margin-bottom: @gap-big;
   @media (min-width: @screen-md) {
   font-size: 12px;
   font-weight: normal;
@@ -297,3 +299,5 @@ article{
   color:#fff;
   &:hover{color:#fff}
 }
+
+
