@@ -1111,7 +1111,7 @@ yepnope([
                 console.log("menu");
                 $('#mmenu').mmenu({
                     moveBackground:true,
-                    position:"right",
+                    position:"left",
                     zposition:"next",
                     searchfield:false,
                     isMenu:true,
