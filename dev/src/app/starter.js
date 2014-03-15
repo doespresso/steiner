@@ -298,7 +298,7 @@ console.log("swiper");
 
                 var Hd_swiper = new Swiper('#scroll-slider', {
 //                    slidesPerView:'auto',
-                    progress:true,
+//                    progress:true,
                     resizeReInit:true,
                     watchActiveIndex:true,
                     speed:2000,
