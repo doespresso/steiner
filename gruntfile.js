@@ -3,11 +3,11 @@ module.exports = function (grunt) {
         pkg:grunt.file.readJSON('package.json'),
         bootstrap_folder:'dev/component/bootstrap_get',
         sass: {
-//            dist: {
-//                files: {
-//                    'assets/js/vendor/mmenu/src/css/jquery.mmenu.all.css':'assets/js/vendor/mmenu/src/scss/jquery.mmenu.all.scss'
-//                }
-//            },
+            dist: {
+                files: {
+                    'assets/js/vendor/mmenu/src/css/jquery.mmenu.all.css':'assets/js/vendor/mmenu/src/scss/jquery.mmenu.all.scss'
+                }
+            },
         },
         less:{
             development:{
