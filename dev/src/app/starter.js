@@ -12,28 +12,28 @@ odometerOptions = {
 //  animation: 'count' // Count is a simpler animation method which just increments the value,
                      // use it when you're looking for something more subtle.
 };
-//yepnope.injectCss(['http://steiner-build.ru/dev/component/switchery/switchery.css']);
-yepnope.injectCss(['http://steiner-build.ru/assets/js/vendor/mmenu/src/css/jquery.mmenu.all.css']);
-//yepnope.injectCss(['http://steiner-build.ru/assets/js/vendor/magnific-popup/magnific-popup.css']);
-yepnope.injectCss(['http://steiner-build.ru/dev/component/odometer/themes/odometer-theme-minimal.css']);
+//yepnope.injectCss(['/dev/component/switchery/switchery.css']);
+yepnope.injectCss(['/assets/js/vendor/mmenu/src/css/jquery.mmenu.all.css']);
+//yepnope.injectCss(['/assets/js/vendor/magnific-popup/magnific-popup.css']);
+yepnope.injectCss(['/dev/component/odometer/themes/odometer-theme-minimal.css']);
 yepnope([
     {
         load:{
-            'pace':'http://steiner-build.ru/assets/js/vendor/pace/pace.min.js',
-            'jquery':'http://steiner-build.ru/assets/js/vendor/jquery/jquery.min.js',
-            'underscore':'http://steiner-build.ru/assets/js/vendor/underscore/underscore.min.js',
-//            'backbone':'http://steiner-build.ru/assets/js/vendor/backbone/backbone.min.js',
-//            'marionette':'http://steiner-build.ru/assets/js/vendor/backbone/marionette.min.js',
-            'bootstrap':'http://steiner-build.ru/assets/js/vendor/bootstrap/bootstrap.min.js',
-            'swiper':'http://steiner-build.ru/assets/js/vendor/swiper/swiper.min.js',
-            'swiper_progress':'http://steiner-build.ru/assets/js/vendor/swiper/idangerous.swiper.progress.min.js',
-//            'odometer':'http://steiner-build.ru/dev/component/odometer/odometer.min.js',
-            'espy':'http://steiner-build.ru/dev/component/espy/dist/jquery.espy.min.js',
-//            'social_snap':'http://steiner-build.ru/assets/js/app/social-snap.js',
-//            'switchery':'http://steiner-build.ru/assets/js/vendor/switchery/switchery.min.js',
-            'mmenu':'http://steiner-build.ru/assets/js/vendor/mmenu/src/js/jquery.mmenu.min.all.js',
-//            'lightbox':'http://steiner-build.ru/assets/js/vendor/magnific-popup/jquery.magnific-popup.min.js',
-//            'calc':'http://steiner-build.ru/assets/js/app/calc.js',
+            'pace':'/assets/js/vendor/pace/pace.min.js',
+            'jquery':'/assets/js/vendor/jquery/jquery.min.js',
+            'underscore':'/assets/js/vendor/underscore/underscore.min.js',
+//            'backbone':'/assets/js/vendor/backbone/backbone.min.js',
+//            'marionette':'/assets/js/vendor/backbone/marionette.min.js',
+            'bootstrap':'/assets/js/vendor/bootstrap/bootstrap.min.js',
+            'swiper':'/assets/js/vendor/swiper/swiper.min.js',
+            'swiper_progress':'/assets/js/vendor/swiper/idangerous.swiper.progress.min.js',
+//            'odometer':'/dev/component/odometer/odometer.min.js',
+            'espy':'/dev/component/espy/dist/jquery.espy.min.js',
+//            'social_snap':'/assets/js/app/social-snap.js',
+//            'switchery':'/assets/js/vendor/switchery/switchery.min.js',
+            'mmenu':'/assets/js/vendor/mmenu/src/js/jquery.mmenu.min.all.js',
+//            'lightbox':'/assets/js/vendor/magnific-popup/jquery.magnific-popup.min.js',
+//            'calc':'/assets/js/app/calc.js',
         },
         callback:{
             'pace':function (url, result, key) {
