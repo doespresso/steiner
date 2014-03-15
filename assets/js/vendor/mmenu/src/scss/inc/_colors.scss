@@ -1,6 +1,6 @@
 //	Colors
 @mixin colors( $cls: "",
-	$baseBg: #333, $pageShadow: 0 0 2px rgba( 0, 0, 0, 0.5 ),
+	$baseBg: #333, $pageShadow: 0 0 20px rgba( 0, 0, 0, 0.5 ),
 	$text: rgba( 255, 255, 255, 0.6 ), $dimmedText: rgba( 255, 255, 255, 0.3 ),
 	$emphasizedBg: rgba( 0, 0, 0, 0.1 ), $highlightedBg: rgba( 255, 255, 255, 0.05 ),
 	$border: rgba( 0, 0, 0, 0.15 )
@@ -9,7 +9,7 @@
 	{
 		box-shadow: $pageShadow;
 	}
-	.mm-menu#{$cls}
+	.mm-ismenu#{$cls}
 	{
 		background: $baseBg;
 		color: $text;
