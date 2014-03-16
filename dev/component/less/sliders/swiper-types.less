@@ -94,14 +94,13 @@ SIZES
 
     [class*='col-sm-'] {
       border-left: 1px rgba(255, 255, 255, 0.15) solid;
-      height: 100%;
+      @media (min-width:@screen-tablet){height: 100%;}
     }
     .vline{
       border-left:1px rgba(255,255,255,0.6) solid;
-      height:100%;
+      @media (min-width:@screen-tablet){height: 100%;}
     }
-    .content-area{
-      margin-top:200px;
+
       .title{
         font-size:102px;
         line-height: 54px;
@@ -109,9 +108,17 @@ SIZES
         text-transform: uppercase;
         color:#fff;
 //        font-family: @f-main;
+        margin-top: 200px;
         margin-left:-2px;
+        @media (max-width:@screen-sm-max){
+          font-size:82px;
+          line-height: 82px;
+          font-weight: 200;
+          margin-top: 180px;
+          margin-left: -4px;
+        }
       }
-    }
+
     .title, .desc, .more {
       margin-bottom: 20px;
       color: #fff;
