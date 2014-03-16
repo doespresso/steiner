@@ -6,12 +6,15 @@
 .btn {
   display: inline-block;
   margin-bottom: 0; // For input.btn
-  font-weight: @btn-font-weight;
+//  font-weight: @btn-font-weight;
+  font-weight: bold;
+  font-family: @f-main;
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
-  border: 1px solid transparent;
+//  border: 1px solid transparent;
+  border:0;
   white-space: nowrap;
   .button-size(@padding-base-vertical; @padding-base-horizontal; @font-size-base; @line-height-base; @border-radius-base);
   .user-select(none);
@@ -52,14 +55,55 @@
 // --------------------------------------------------
 
 .btn-white {
-  .button-variant(@gray-light; #fff; transparent);
+  .button-variant(@gray; #fff; transparent);
+  text-align: left;
+  padding-left: @gap-base;
 }
+
+.btn-line{
+  .button-variant(#000; transparent; transparent);
+  text-align: left;
+  border-bottom: 1px @gray-lighter solid;
+  text-align: left;
+  padding-left:0;// @gap-small;
+  padding-right: @gap-big;
+  position:relative;
+  .transition(0.1s);
+
+  .make-cross-down-right(@sz:@gap-base; @c:@gray-light);
+  &:hover{
+    .make-cross-down-right(@sz:@gap-big*2.3; @c:#000);
+  }
+}
+
+.btn-white-line{
+  .button-variant(#fff; transparent; transparent);
+  text-align: left;
+//  border-bottom: 1px rgba(255,255,255,0.5) solid;
+//  border-top: 1px rgba(255,255,255,0.5) solid;
+  text-align: left;
+  padding-left:0;// @gap-small;
+  padding-bottom:0;// @gap-small;
+  padding-right: @gap-big;
+  position:relative;
+  .transition(0.2s);
+
+  .make-cross-top-left(@sz:@gap-base; @c:rgba(255,255,255,1));
+  &:hover{
+//    padding-left:@gap-base;
+    .make-cross-top-left(@sz:@gap-big*3; @c:#fff);
+  }
+}
+
 
 .btn-default {
   .button-variant(@btn-default-color; @btn-default-bg; @btn-default-border);
 }
+
 .btn-primary {
   .button-variant(@btn-primary-color; @btn-primary-bg; @btn-primary-border);
+  font-family: @f-main;
+  font-weight: bold;
 }
 // Success appears as green
 .btn-success {

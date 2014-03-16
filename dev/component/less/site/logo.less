@@ -9,13 +9,13 @@
 .logo-white{
   display:inline-block;
 //  background-image: url('/assets/logo/black-e.svg');
-  background-image: url('/assets/logo/white.svg');
+  background-image: url('/assets/logo/white-e.svg');
   background-repeat: no-repeat;
   background-size: contain;
 }
 
 
-@logo-width:60%;
+@logo-width:80%;
 @logo-height:50px;
 
 .logo-standart-menu{
@@ -30,6 +30,11 @@
   width:@logo-width;
   height:@logo-height;
   padding:0;
+//  margin-top: -7px;
+  margin-left: -15px;
+  @media (max-width:@screen-phone){
+    margin-left: -5px;
+  }
 }
 
 

@@ -1,0 +1,119 @@
+  .make-cross-down-left(@sz:@gap-base; @c:@gray-light){
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: block;
+      height: 1px;
+      width: @sz;
+      margin-left: 1px - @sz/2;
+      margin-bottom: -1px;
+      background-color: @c;
+  .transition(0.5s);
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: block;
+      height: @sz;
+      width: 1px;
+      margin-bottom: -@sz/2;
+      background-color: @c;
+  .transition(0.5s);
+    }
+  }
+
+
+    .make-cross-down-right(@sz:@gap-base; @c:@gray-light){
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      display: block;
+      height: 1px;
+      width: @sz;
+      margin-right: -@sz/2;
+      margin-bottom: -1px;
+      background-color: @c;
+  .transition(0.5s);
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      display: block;
+      height: @sz;
+      width: 1px;
+      margin-bottom: -@sz/2;
+      margin-right: -1px;
+      background-color: @c;
+  .transition(0.5s);
+    }
+  }
+
+
+    .make-cross-top-left(@sz:@gap-base; @c:@gray-light){
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      height: 1px;
+      width: @sz;
+      margin-left: 1px - @sz/2;
+      margin-top: -1px;
+      background-color: @c;
+  .transition(0.5s);
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      height: @sz;
+      width: 1px;
+      margin-top: -@sz/2;
+      background-color: @c;
+  .transition(0.5s);
+    }
+  }
+
+
+    .make-cross-top-right(@sz:@gap-base; @c:@gray-light){
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: block;
+      height: 1px;
+      width: @sz;
+      margin-right: 1px - @sz/2;
+      margin-top: -1px;
+      background-color: @c;
+  .transition(0.5s);
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: block;
+      height: @sz;
+      width: 1px;
+      margin-top: -@sz/2;
+      background-color: @c;
+  .transition(0.5s);
+    }
+  }

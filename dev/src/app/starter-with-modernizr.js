@@ -1129,12 +1129,12 @@ yepnope([
                 "use strict";
                 var Hd_swiper = new Swiper('#scroll-slider', {
 //                    slidesPerView:'auto',
-                    progress:true,
+//                    progress:true,
                     resizeReInit:true,
                     autoResize:true,
                     watchActiveIndex:true,
-                    speed:2000,
-                    loop:false,
+                    speed:1000,
+                    loop:true,
                     mode:'horizontal',
 //                    calculateHeight:true,
                     mousewheelControl:false,
@@ -1209,8 +1209,6 @@ yepnope([
                 });
 
 
-
-                                // Set Z-Indexes
 //                for (var i = 0; i < Hd_swiper.slides.length; i++){
 //                    Hd_swiper.slides[i].style.zIndex = i;
 //                }
