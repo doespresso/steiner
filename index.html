@@ -30,23 +30,41 @@
 <body class="homepage">
 
 <div class="page-wrapper">
-<!--<div id="body-bg">-->
-  <!--<div class="container">-->
-    <!--<div class="row visible-lg visible-md visible-sm">-->
-      <!--<div class="col-sm-2 grider"></div>-->
-      <!--<div class="col-sm-2 grider"></div>-->
-      <!--<div class="col-sm-2 grider"></div>-->
-      <!--<div class="col-sm-2 grider"></div>-->
-      <!--<div class="col-sm-2 grider"></div>-->
-      <!--<div class="col-sm-2 grider"></div>-->
-    <!--</div>-->
-  <!--</div>-->
-<!--</div>-->
+<div id="body-bg">
+  <div class="container">
+    <div class="row visible-lg visible-md visible-sm">
+      <div class="col-sm-2 grider"></div>
+      <div class="col-sm-2 grider"></div>
+      <div class="col-sm-2 grider"></div>
+      <div class="col-sm-2 grider"></div>
+      <div class="col-sm-2 grider"></div>
+      <div class="col-sm-2 grider"></div>
+    </div>
+  </div>
+</div>
 <header>
   <div id="top-panel" class="hidden-sm hidden-xs">
     <div class="container">
-      <div class="row topmenu">
+
+      <div class="row toplogo">
         <div class="col-md-2 cross">
+
+        </div>
+        <div class="col-md-2">
+          <div class="logo-standart"></div>
+        </div>
+        <div class="col-md-2"></div>
+        <div class="col-md-2"></div>
+        <div class="col-md-2">
+          <a class="ilink dropdown-toggle" data-toggle="dropdown" href="#">+7 499 123 45 67</a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">О компании STEINER</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row topmenu">
+        <div class="col-md-2">
           <!--<div class="logo-standart"></div>-->
         </div>
         <div class="col-md-2"><a class="ilink dropdown-toggle" data-toggle="dropdown" href="#">компания</a>
@@ -62,9 +80,11 @@
         <div class="col-md-2"><a class="ilink" href="#">решения</a></div>
         <div class="col-md-2"><a class="ilink" href="#">контакты</a></div>
       </div>
+
     </div>
   </div>
-  <figure class="presentation">
+
+  <figure id="presentation" class="presentation">
   <div class="container presentation-wrapper">
     <!--<div class="row">-->
       <!--<div class="col-md-12">-->
@@ -74,11 +94,11 @@
           <div id="top-logo">
             <div class="container">
               <div class="row">
-                <div class="col-md-8 col-sm-1 col-xs-1"></div>
-                <div class="col-md-2 col-sm-8 col-xs-8">
-                  <!--<div class="logo-standart-white"></div>-->
+                <div class="col-md-2 col-sm-1 col-xs-1"></div>
+                <div class="col-md-2 col-sm-8 col-xs-8 visible-xs visible-sm">
+                  <div class="logo-standart-white"></div>
                 </div>
-                <div class="col-md-2 col-xs-2 col-sm-2 pull-right"><a class="show-mobile-menu" href="#mmenu"><i class="icon-menu2"></i></a></div>
+                <div class="col-md-2 col-xs-2 col-sm-2 pull-right"><a class="show-mobile-menu" href="#mmenu"><span></span><span></span><span></span></a></div>
               </div>
             </div>
           </div>
@@ -204,6 +224,7 @@
     <!--</div>-->
   </div>
   </figure>
+
 </header>
 
 
@@ -245,9 +266,7 @@
   </div>
 </section>
 
-
-
-<section id="foto">
+<section id="foto" class="spy">
   <div class="container">
     <div class="row">
         <div class="col-md-2">
@@ -295,8 +314,7 @@
   </div>
 </section>
 
-
-<section class="mobile-fit">
+<section id="advantages" class="spy mobile-fit">
   <div class="container">
     <div class="row">
       <div class="col-md-2">
@@ -335,10 +353,7 @@
     </div>
 </section>
 
-
-
-
-<section id="documents" class="mobile-fit">
+<section id="documents" class="spy mobile-fit">
   <div class="container">
     <div class="row">
       <div class="col-md-6 col-md-offset-6">
@@ -399,39 +414,23 @@
 
 </div>
 
-<!--<div id="callback" class="mmenu">--><!--<div>--><!--callback form--><!--</div>--><!--<div>-->
-
 <nav id="mmenu" class="mmenu">
   <div>
     <ul class="list">
-      <li><a href="#">Компания</a></li>
-      <li><a href="#">Технологии</a></li>
-      <li><a href="#">продукиы</a>
+      <li><span>Компания</span>
         <ul>
-          <li><a href="">Стандартные краны</a>
-            <ul>
-              <li><a href="#">Двухбалочные краны</a></li>
-              <li><a href="#">Однобалочные краны</a></li>
-            </ul>
-          </li>
-          <li><span>Специальные краны</span>
-            <ul>
-              <li><a href="#">Автоматизированные краны</a></li>
-              <li><a href="#">Козловые краны</a></li>
-              <li><a href="#">Краны большой грузоподъемности</a></li>
-              <li><a href="#">Краны для работы в тяжелых условиях</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Консольные краны и подъемные системы малой грузоподъемности</a>
-            <ul>
-              <li><a href="#">Автоматизированные краны</a></li>
-              <li><a href="#">Козловые краны</a></li>
-              <li><a href="#">Краны большой грузоподъемности</a></li>
-              <li><a href="#">Краны для работы в тяжелых условиях</a></li>
-            </ul>
-          </li>
+          <li><a href="#">О компании STEINER</a></li>
+          <li><a href="#">Услуги</a></li>
+          <li><a href="#">Проекты, портфолио</a></li>
+          <li><a href="#">Контактная информация</a></li>
+          <li><a href="#">Новости</a></li>
         </ul>
       </li>
+      <li><a href="#">Кровля</a></li>
+      <li><a href="#">Фасад</a></li>
+      <li><a href="#">Терраса</a></li>
+      <li><a href="#">Галерея проектов</a></li>
+      <li><a href="#">Презентации</a></li>
     </ul>
   </div>
 </nav>

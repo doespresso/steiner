@@ -136,6 +136,7 @@ yepnope([
                 console.log("jquery loaded");
                 $(document).ready(function(){
 
+
 //social
 
 //social
@@ -191,7 +192,7 @@ yepnope([
             },
             'espy':function (url, result, key) {
                 console.log("elspy");
-                $("section").espy(function(entered, state){
+                $("section.spy").espy(function(entered, state){
                     if (entered){
 //                        setTimeout(function(){
                                 $(this).find(".show-me").addClass("show-on bounce");
@@ -202,29 +203,10 @@ yepnope([
                 },{
                     offset:-200
                 });
-//                $("#top-wrapper").espy(function(entered, state){
-//                    if (entered){
-                        setTimeout(function () {
-                            $("#cranes-count").fadeIn();
-                            $("#top-wrapper .rus").fadeIn();
-                            $('#cranes-count').html('745');
-//                            od.update(752);
-                        }, 2000);
-//                    }
-//                },{
-//                    offset:-100
-//                });
+
             },
 
-//            'odometer':function (url, result, key) {
-//                od = new Odometer({
-//                  el: $('#cranes-count')[0],
-//                  duration:500,
-//                  format: '',
-//                  theme: 'minimal',
-//                  animation:'simple'
-//                });
-//            },
+
 
 //            'switchery':function (url, result, key) {
 //                console.log("switch");
@@ -252,22 +234,23 @@ yepnope([
 //                    removalDelay:300,
 //                });
 //            },
+
             'mmenu':function (url, result, key) {
                 console.log("menu");
                 $('#mmenu').mmenu({
-                    moveBackground:true,
+                    moveBackground:false,
                     position:"left",
-                    zposition:"next",
+                    zposition:"front",
                     searchfield:false,
                     isMenu:true,
                     counters:false,
-                    classes: "mm-firm",
+//                    classes: "mm-firm",
 //                    slidingSubmenus: false
-                    labels:{
-                        fixed:true,
-                        collapse:true
-                    },
-                    onClick:{setSelected:true,preventDefault:true}
+//                    labels:{
+//                        fixed:true,
+//                        collapse:true
+//                    },
+//                    onClick:{setSelected:true,preventDefault:true}
                 },
                     {
                        selectedClass  : "Selected",
@@ -289,17 +272,11 @@ yepnope([
             },
             'swiper_progress':function () {
                 "use strict";
-
-console.log("swiper");
-
-
-
-
-
                 var Hd_swiper = new Swiper('#scroll-slider', {
 //                    slidesPerView:'auto',
-//                    progress:true,
+                    progress:true,
                     resizeReInit:true,
+                    autoResize:true,
                     watchActiveIndex:true,
                     speed:2000,
                     loop:false,
@@ -311,6 +288,11 @@ console.log("swiper");
 //                    pagination:'#scroll-swiper-pagination',
                     autoplay:5000,
 
+
+                    onFirstInit:function(swiper){
+                        console.log("swiper hd first init");
+//                        $("#presentation").addClass("animated fadeInUp");
+                    },
 
 //                    onProgressChange: function(swiper){
 //                      for (var i = 0; i < swiper.slides.length; i++){
@@ -371,10 +353,12 @@ console.log("swiper");
 
                 });
 
+
+
                                 // Set Z-Indexes
-                for (var i = 0; i < Hd_swiper.slides.length; i++){
-                    Hd_swiper.slides[i].style.zIndex = i;
-                }
+//                for (var i = 0; i < Hd_swiper.slides.length; i++){
+//                    Hd_swiper.slides[i].style.zIndex = i;
+//                }
 
                 $("#tab-wrapper .selector").on('touchstart mousedown',function(e){
                     e.preventDefault()
@@ -397,6 +381,10 @@ console.log("swiper");
                     Hd_swiper.startAutoplay();
                 });
 
+
+                $(window).resize(function() {
+                    Hd_swiper.resizeFix();
+                });
 
                 /////////////////////////
 
