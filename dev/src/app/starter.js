@@ -274,15 +274,15 @@ yepnope([
                 "use strict";
                 var Hd_swiper = new Swiper('#scroll-slider', {
 //                    slidesPerView:'auto',
-//                    progress:true,
+                    progress:true,
                     resizeReInit:true,
                     autoResize:true,
                     watchActiveIndex:true,
                     speed:1000,
-                    loop:true,
+                    loop:false,
                     mode:'horizontal',
 //                    calculateHeight:true,
-                    mousewheelControl:false,
+                    mousewheelControl:true,
                     keyboardControl:true,
 //                    paginationClickable:true,
 //                    pagination:'#scroll-swiper-pagination',
@@ -399,7 +399,7 @@ yepnope([
                     keyboardControl:true,
 //                    paginationClickable:true,
 //                    pagination:'#scroll-swiper-pagination',
-                    autoplay:3000,
+//                    autoplay:3000,
 
 //                    onProgressChange: function(swiper){
 //                        console.log("start p");
