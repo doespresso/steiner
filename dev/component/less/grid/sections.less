@@ -58,16 +58,18 @@ header {
 //  height: @top-height;
   padding: (@top-height - 20px)/2 0;
   .topmenu {
-    >a {
-      font-size: 11px;
+    .ilink {
+//      font-weight:bold;
+//      letter-spacing: 1px;
+      font-size: 12px;
       line-height: 12px;
       text-transform: uppercase;
-      color: #000;
+      color: @gray;
       display: inline-block;
       padding-bottom: @gap-small/2.5; //    margin-right: @gap-base;
     //    margin-left: -@gap-small;
     //    padding-left: @gap-base;
-      border-bottom: 1px #000 solid;
+      border-bottom: 1px @gray solid;
     }
   }
 }
@@ -79,7 +81,7 @@ header {
 .presentation {
   position: relative;
   margin: 0 0;
-  height: 540px;
+  height: 600px;
   padding: 0 0;
   z-index: 1;
   overflow: hidden;

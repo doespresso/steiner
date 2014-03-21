@@ -354,9 +354,9 @@ yepnope([
                 });
 
 
-//                for (var i = 0; i < Hd_swiper.slides.length; i++){
-//                    Hd_swiper.slides[i].style.zIndex = i;
-//                }
+                for (var i = 0; i < Hd_swiper.slides.length; i++){
+                    Hd_swiper.slides[i].style.zIndex = i;
+                }
 
                 $("#tab-wrapper .selector").on('touchstart mousedown',function(e){
                     e.preventDefault()
